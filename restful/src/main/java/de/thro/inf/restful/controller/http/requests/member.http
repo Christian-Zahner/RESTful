@@ -1,0 +1,97 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://localhost:8080/api/v1/member
+Content-Type: application/json
+
+{
+  "address": {
+    "city": "Munich",
+    "postcode": "80331",
+    "street": "Stachus 1"
+  },
+  "credit": 500,
+  "firstName": "Hans",
+  "lastName": "Pommes",
+  "mail": "hans@pommes.de",
+  "nickName": "pommeseater123",
+  "password": "password",
+  "version": 1
+}
+
+###
+
+POST http://localhost:8080/api/v1/member
+Content-Type: application/json
+
+{
+  "address": {
+    "city": "Munich",
+    "postcode": "80331",
+    "street": "Stachus 5"
+  },
+  "credit": 500,
+  "firstName": "Karl",
+  "lastName": "Pizza",
+  "mail": "karl@pizza.de",
+  "nickName": "pizzaeater123",
+  "password": "password1",
+  "version": 1
+}
+
+###
+
+GET http://localhost:8080/api/v1/member/pommeseater123
+Accept: application/json
+
+###
+
+DELETE http://localhost:8080/api/v1/member/pommeseater123
+Accept: application/json
+
+###
+
+PUT http://localhost:8080/api/v1/member/pommeseater123
+Content-Type: application/json
+
+{
+  "firstName": "Bruno",
+  "lastName": "Salat"
+}
+
+###
+
+PUT http://localhost:8080/api/v1/member/pommeseater123
+Content-Type: application/json
+
+{
+  "address": {
+    "city": "Waldkraiburg",
+    "postcode": "84478",
+    "street": "Graslitzer Straße 1"
+  },
+  "firstName": "Bert",
+  "lastName": "Kartoffel",
+  "mail": "Bert@Kartoffel.de",
+  "password": "password1234"
+}
+
+###
+
+PUT http://localhost:8080/api/v1/member/pommeseater123
+Content-Type: application/json
+
+{
+  "address": {
+    "city": "Waldkraiburg",
+    "street": "Graslitzer Straße 1"
+  },
+  "firstName": "Bert",
+  "lastName": "Kartoffel"
+}
+
+###

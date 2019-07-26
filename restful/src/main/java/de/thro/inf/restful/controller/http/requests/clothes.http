@@ -1,0 +1,71 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://localhost:8080/api/v1/clothes
+Content-Type: application/json
+
+{
+  "brand": "Nike",
+  "exchangeValue": 125,
+  "id": 1,
+  "name": "Pants",
+  "originalPriceInEuroCent": 500,
+  "ownerCl": {
+    "nickName": "pommeseater123"
+  },
+  "sex": "M",
+  "size": "S",
+  "type": "PANTS",
+  "version": 1
+}
+
+###
+
+POST http://localhost:8080/api/v1/clothes
+Content-Type: application/json
+
+{
+  "brand": "Adidas",
+  "exchangeValue": 100,
+  "id": 2,
+  "name": "Trousers",
+  "originalPriceInEuroCent": 400,
+  "ownerCl": {
+    "nickName": "pizzaeater123"
+  },
+  "sex": "M",
+  "size": "S",
+  "type": "TROUSERS",
+  "version": 1
+}
+
+###
+
+GET http://localhost:8080/api/v1/clothes/1
+Accept: application/json
+
+###
+
+DELETE http://localhost:8080/api/v1/clothes/1
+Accept: application/json
+
+###
+
+PUT http://localhost:8080/api/v1/clothes/1
+Content-Type: application/json
+
+{
+  "brand": "Puma",
+  "exchangeValue": 250,
+  "name": "Shirt",
+  "originalPriceInEuroCent": 500,
+  "sex": "F",
+  "size": "XL",
+  "type": "SHIRT"
+}
+
+###
